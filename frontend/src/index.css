@@ -1,0 +1,119 @@
+
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+  font-size: 16px;
+  font-family:Helvetica,  Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*  for roots id in public  index.html, the root element is a div */
+#root {
+  height:100%;
+
+}
+/*layout of the homepage*/
+.grid-container{
+  display:grid;
+  grid-template-areas: 'header'
+  'main'
+  'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5 rem 1 fr 5 rem;
+  height: 100%;
+}
+
+header{
+  grid-area: header;
+  background-color: rgb(37, 36, 34);
+}
+main{
+  grid-area: main;
+  padding: 1 rem;
+}
+footer{
+  grid-area: footer;
+  background-color:  rgb(37, 36, 34);
+  color: white;
+}
+/*common classes*/
+h1{
+  font-size: 1.8rem;
+  padding: 1 rem 0;
+}
+
+h2{
+  font-size: 1.6rem;
+  padding: 1 rem 0;
+}
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  color:rgb(230, 111, 0)
+}
+/* for all links inside the header*/
+header a{
+color: white;
+padding: 1 rem;
+
+}
+/* for the brand name/title */
+a.brand{
+  color: white;
+  font-size: x-large;
+  font-weight: bold;
+}
+/* class for the two divs in header*/    
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+/* footer positioning by adding a subclass to row*/
+.row.center {
+  justify-content: center;
+}
+
+/*image*/
+img{
+  border-radius: 0.5 rem;
+}
+img.medium{
+  max-width: 29 rem;
+  width: 100%;
+}
+
+/*card*/
+.card{
+  border: 0.1rem white;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1 rem;
+}
+
+.card-body{
+  padding: 1rem;
+}
+/* all direct child of card body*/
+.card-body >*{
+  margin-bottom: 0.5rem;
+}
+
+.price{
+  font-size: 2rem;
+}
+
+/*rating*/ 
+/*for all spans inside rating */
+.rating span{
+  color: #f0c040;
+  margin: 0.1rem;
+}
